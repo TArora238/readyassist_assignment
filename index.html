@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Ready Assist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="d-flex">
+        <div class="sidebar customerSide">
+            <div class="sidebarHeader p-2">
+                <h4 class="text-white p-0 m-0 pl-3 pr-3">Tasks
+                    <span class="">
+                        <i class="fa fa-search float-right" aria-hidden="true"></i>
+                    </span>
+                </h4>
+            </div>
+            <div class="sidebarSection">
+                <div class="sideBarTabs">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Unassigned</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Assigned</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Completed</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="customerList"></div>
+            </div>
+        </div>
+        <section>
+            <div id="map"></div>
+            <div class="filterMap">
+
+            </div>
+        </section>
+        <div class="sidebar serviceSide">
+            <div class="sidebarHeader p-2">
+                <h4 class="text-white p-0 m-0 pl-3 pr-3">Mechanic
+                    <span class="">
+                        <i class="fa fa-search float-right" aria-hidden="true"></i>
+                    </span>
+                </h4>
+            </div>
+            <div class="sidebarSection">
+                <div class="sideBarTabs">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Free</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Busy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inactive</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="customerList"></div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/vendor/jquery/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/popper/popper.min.js"></script>
+    <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/maps.js"></script>
+    <!-- AIzaSyAyot9hwfyE6M8nEoH0G-Yx5GGqQqCp9m8 -->
+    <script>
+        function initMap() {
+            // The location of Uluru
+            var uluru = {
+                lat: 30.64,
+                lng: 77.366
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 11,
+                    center: uluru
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyot9hwfyE6M8nEoH0G-Yx5GGqQqCp9m8&callback=initMap" async defer type="text/javascript"></script>
+</body>
+
+</html>
