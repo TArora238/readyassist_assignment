@@ -17,61 +17,131 @@
 
 <body>
     <header></header>
-    <main class="d-flex">
-        <div class="sidebar customerSide">
+    <main class="d-flex  justify-content-between">
+        <div class="sidebar customerSide" id="customerSidebar">
             <div class="sidebarHeader p-2">
                 <h4 class="text-white p-0 m-0 pl-3 pr-3">Tasks
                     <span class="">
                         <i class="fa fa-search float-right" aria-hidden="true"></i>
                     </span>
                 </h4>
+                <button onclick="hideSideBar('#customerSidebar')" class="toggleCustomerService"><span><i
+                            class="fa fa-chevron-left"
+                            aria-hidden="true"></i></span></button>
             </div>
             <div class="sidebarSection">
                 <div class="sideBarTabs">
                     <ul class="nav nav-pills nav-fill">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Unassigned</a>
+                            <a class="nav-link active" data-toggle="tab" href="#unassigned">Unassigned</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Assigned</a>
+                            <a class="nav-link" data-toggle="tab" href="#assigned">Assigned</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Completed</a>
+                            <a class="nav-link" data-toggle="tab" href="#completed">Completed</a>
                         </li>
                     </ul>
                 </div>
-                <div class="customerList"></div>
+                <div class="customerList tab-content">
+                    <div class="tab-pane container active" id="unassigned">...</div>
+                    <div class="tab-pane container fade" id="assigned">...</div>
+                    <div class="tab-pane container fade" id="completed">...</div>
+                </div>
             </div>
         </div>
-        <section>
+        <section id="mapSection">
             <div id="map"></div>
             <div class="filterMap">
-
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filters
+                    </button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                        <div class="filterItem d-flex justify-content-between">
+                            <p>Hide Completed Tasks</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="hideCompletedTasks" onchange="filterHandler('hideCompletedTasks')">
+                                <label class="form-check-label" for="hideCompletedTasks"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Show Tasks in Clusters</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="showTasksClusters" onchange="filterHandler('showTasksClusters')">
+                                <label class="form-check-label" for="showTasksClusters"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Show Mechanics in Clusters</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="showMechanicsClusters" onchange="filterHandler('showMechanicsClusters')">
+                                <label class="form-check-label" for="showMechanicsClusters"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Hide Offline Mechanics</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="hideOfflineMechanics" onchange="filterHandler('hideOfflineMechanics')">
+                                <label class="form-check-label" for="hideOfflineMechanics"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Hide Busy Mechanic</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="hideBusyMechanics" onchange="filterHandler('hideBusyMechanics')">
+                                <label class="form-check-label" for="hideBusyMechanics"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Show Dark Map</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="showDarkMap" onchange="filterHandler('showDarkMap')">
+                                <label class="form-check-label" for="showDarkMap"></label>
+                            </div>
+                        </div>
+                        <div class="filterItem d-flex  justify-content-between">
+                            <p>Show Web Notifications</p>
+                            <div class="roundCheckbox">
+                                <input type="checkbox" class="form-check-input" id="showWebNotifications" onchange="filterHandler('showWebNotifications')">
+                                <label class="form-check-label" for="showWebNotifications"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="sidebar serviceSide">
+        <div class="sidebar serviceSide" id="serviceSidebar">
             <div class="sidebarHeader p-2">
                 <h4 class="text-white p-0 m-0 pl-3 pr-3">Mechanic
                     <span class="">
                         <i class="fa fa-search float-right" aria-hidden="true"></i>
                     </span>
                 </h4>
+                <button onclick="hideSideBar('#serviceSidebar')" class="toggleCustomerService"><span><i
+                            class="fa fa-chevron-right"
+                            aria-hidden="true"></i></span></button>
             </div>
             <div class="sidebarSection">
                 <div class="sideBarTabs">
                     <ul class="nav nav-pills nav-fill">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Free</a>
+                            <a class="nav-link active" data-toggle="tab" href="#free">Free</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Busy</a>
+                            <a class="nav-link" data-toggle="tab" href="#busy">Busy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inactive</a>
+                            <a class="nav-link" data-toggle="tab" href="#inactive">Inactive</a>
                         </li>
                     </ul>
                 </div>
-                <div class="customerList"></div>
+                <div class="customerList tab-content">
+                    <div class="tab-pane container active" id="free">free</div>
+                    <div class="tab-pane container fade" id="busy">fre33</div>
+                    <div class="tab-pane container fade" id="inactive">free3333</div>
+                </div>
             </div>
         </div>
     </main>
@@ -84,27 +154,7 @@
     <script src="js/main.js"></script>
     <script src="js/maps.js"></script>
     <!-- AIzaSyAyot9hwfyE6M8nEoH0G-Yx5GGqQqCp9m8 -->
-    <script>
-        function initMap() {
-            // The location of Uluru
-            var uluru = {
-                lat: 30.64,
-                lng: 77.366
-            };
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 11,
-                    center: uluru
-                });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyot9hwfyE6M8nEoH0G-Yx5GGqQqCp9m8&callback=initMap" async defer type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyot9hwfyE6M8nEoH0G-Yx5GGqQqCp9m8&callback=initMap&sensor=true" async defer type="text/javascript"></script>
 </body>
 
 </html>
