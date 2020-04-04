@@ -1,11 +1,14 @@
-let map, marker, markers = [], markerCluster, i, locations = [], clusters = [];
+let map, mapElement, marker, markers = [], markerCluster, i, locations = [], clusters = [], directionsService, directionsRenderer, bounds;
 const initLocation = {
     lat: 12.935,
     lng: 77.624
 };
+
 initMap = () => {
-    let mapElement = document.getElementById('map');
-    
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
+    bounds = new google.maps.LatLngBounds();
+    mapElement = document.getElementById('map');
     resizeMap();
     map = new google.maps.Map(
         mapElement, {
@@ -35,7 +38,6 @@ initMarkers = (locations) => {
             markers[i].setMap(null);
     }
     markers = [];
-    let bounds = new google.maps.LatLngBounds();
     for (const key in locations) {
         if (locations.hasOwnProperty(key)) {
             let icon = {};
@@ -117,8 +119,8 @@ resizeMap = () => {
     let mapSection = document.getElementById('mapSection');
     const customerSidebar = document.querySelector("#customerSidebar");
     const serviceSidebar = document.querySelector("#serviceSidebar");
-    customerSidebar.classList.contains("customerSide") ? paddingLeft = 400 : paddingLeft = 0;
-    serviceSidebar.classList.contains("serviceSide") ? paddingRight = 400 : paddingRight = 0;
+    customerSidebar.classList.contains("customerSide") ? paddingLeft = document.querySelector(".customerSide").offsetWidth : paddingLeft = 0;
+    serviceSidebar.classList.contains("serviceSide") ? paddingRight = document.querySelector(".serviceSide").offsetWidth : paddingRight = 0;
     mapSection.style.paddingRight = paddingRight + 'px';
     mapSection.style.paddingLeft = paddingLeft + 'px';
 }
@@ -171,4 +173,37 @@ filterMarkers = (id, type) => {
             break;
     }
     
+}
+
+pathHistory = () => {
+    const latLong1 = new google.maps.LatLng(initLocation.lat, initLocation.lng);
+    const latLong2 = new google.maps.LatLng(initLocation.lat+1, initLocation.lng+1);
+    bounds = new google.maps.LatLngBounds();
+    directionsRenderer.setMap(map);
+    directionsService.route(
+        {
+            origin: latLong1,
+            destination: latLong2,
+            travelMode: 'DRIVING'
+        },
+        function (response, status) {
+            if (status === 'OK') {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                markers = [];
+                bounds.extend(latLong1);
+                bounds.extend(latLong2);
+                map.fitBounds(bounds);
+                directionsRenderer.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+}
+
+resetMap = () => {
+    directionsRenderer.setMap(null);
+    bounds = new google.maps.LatLngBounds();
+    initMarkers(locations);
 }

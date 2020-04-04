@@ -26,8 +26,7 @@
                     </span>
                 </h4>
                 <button onclick="hideSideBar('#customerSidebar')" class="toggleCustomerService"><span><i
-                            class="fa fa-chevron-left"
-                            aria-hidden="true"></i></span></button>
+                            class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
             </div>
             <div class="sidebarSection">
                 <div class="sideBarTabs">
@@ -43,10 +42,413 @@
                         </li>
                     </ul>
                 </div>
-                <div class="customerList tab-content">
-                    <div class="tab-pane container active" id="unassigned">...</div>
-                    <div class="tab-pane container fade" id="assigned">...</div>
-                    <div class="tab-pane container fade" id="completed">...</div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="unassigned">
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/assign.svg" class="rounded-circle" alt="">
+                                <p class="text-gray">Assign Mechanic</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-secondary p-2">Unassigned</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/assign.svg" class="rounded-circle" alt="">
+                                <p class="text-gray">Assign Mechanic</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-secondary p-2">Unassigned</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/assign.svg" class="rounded-circle" alt="">
+                                <p class="text-gray">Assign Mechanic</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-secondary p-2">Unassigned</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="assigned">
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Vedanta</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-warning p-2">Assigned</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Ramchandra</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-primary p-2">Started</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Yadvendra</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-primary p-2">Started</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="completed">
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Someone</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-success p-2">Successful</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                                <label class="m-1 text-center text-uppercase badge badge-delay p-2">
+                                    <span><i class="fa fa-clock-o"></i></span>
+                                    Delayed
+                                </label>
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Mechanic2</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-danger p-2">Cancelled</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-2 pb-2 border-bottom">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                                <p class="text-gray">Mechanic3</p>
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timelinePointer">
+
+                                </div>
+                                <div class="timeLocation">
+                                    <p class="m-0">12:00 PM - 01:00 PM</p>
+                                    <p class="m-0">Yashasvi</p>
+                                    <p class="text-gray m-0">Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-column">
+                                <label class="m-1 text-center text-uppercase badge badge-success p-2">Successful</label>
+                                <img src="assets/images/arrow-left.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailsSlider" id="customerDetails">
+                    <div class="closeDetailsSlider close" onclick="hideDetailsSlider('customerDetails')">&times;</div>
+                    <div class="sideBarTabs">
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#details">Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#customer">Customer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#history">History</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="details">
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Status</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p class="text-success">Successful</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Task Desc</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>Activa 3G, flat tyre</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Start Before</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>31 MAR 2020, 12:00 PM </p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Complete Before</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>31 MAR 2020, 01:00 PM </p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Tracking Link</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p class="text-primary">Click here to track</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Team</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>BLR</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Mechanic</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p class="text-primary">Vishal Das</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Order ID</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>166112</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Time Taken</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>16 Mins</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Distance Travelled</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>4 KMs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="customer">
+                            <h5 class="text-gray p-4">Customer Details</h5>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Name</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>Prabhakaran</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Contact</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>+91-9423423423</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Address</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>#123, 123 ,123 , Bangalore, 560012</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="history">
+                            <div class="card mr-auto mt-3 mb-3 ml-auto" style="max-width: 340px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 align-items-center d-flex justify-content-center">
+                                        <img src="assets/images/user.png" width="50px" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Vishal Das</h6>
+                                            <p class="card-text">4.9 KMs 39 Mins</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="timelineBox">
+                                <ul id="timeline-list">
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-success pt-1 pb-1 pl-2 pr-2">Completed</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-secondary pt-1 pb-1 pl-2 pr-2">Added</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-primary pt-1 pb-1 pl-2 pr-2">Started</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pathBtnDiv text-center">
+                        <button onclick="pathHistory()" class="btn btn-primary" style="border-radius: 20px;">Show Path
+                            History</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,8 +522,7 @@
                     </span>
                 </h4>
                 <button onclick="hideSideBar('#serviceSidebar')" class="toggleCustomerService"><span><i
-                            class="fa fa-chevron-right"
-                            aria-hidden="true"></i></span></button>
+                            class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
             </div>
             <div class="sidebarSection">
                 <div class="sideBarTabs">
@@ -137,10 +538,215 @@
                         </li>
                     </ul>
                 </div>
-                <div class="customerList tab-content">
-                    <div class="tab-pane container active" id="free">free</div>
-                    <div class="tab-pane container fade" id="busy">fre33</div>
-                    <div class="tab-pane container fade" id="inactive">free3333</div>
+                <div class="serviceList tab-content">
+                    <div class="tab-pane active" id="free">
+                        <div class="taskItem d-flex pt-3 pb-3 border-bottom align-items-center">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timeLocation">
+                                    <p class="m-0">Manikanta (63)</p>
+                                    <p class="text-gray m-0">+91-2342342798</p>
+                                    <p class="text-gray m-0">RSA, 35 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-row">
+                                <img src="assets/images/chat.svg" alt="">
+                                <div class="text-center">
+                                    <span class="round-circle">5</span>
+                                    <p class="mb-0 mt-1 text-gray">Tasks</p>
+                                </div>
+                                <img src="assets/images/arrow-left.svg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="busy">
+                        <div class="taskItem d-flex pt-3 pb-3 border-bottom align-items-center">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timeLocation">
+                                    <p class="m-0">Manikanta (63)</p>
+                                    <p class="text-gray m-0">+91-2342342798</p>
+                                    <p class="text-gray m-0">RSA, 35 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-row">
+                                <img src="assets/images/chat.svg" alt="">
+                                <div class="text-center">
+                                    <span class="round-circle">5</span>
+                                    <p class="mb-0 mt-1 text-gray">Tasks</p>
+                                </div>
+                                <img src="assets/images/arrow-left.svg" alt="">
+
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-3 pb-3 border-bottom align-items-center">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timeLocation">
+                                    <p class="m-0">Manikanta (63)</p>
+                                    <p class="text-gray m-0">+91-2342342798</p>
+                                    <p class="text-gray m-0">RSA, 35 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-row">
+                                <img src="assets/images/chat.svg" alt="">
+                                <div class="text-center">
+                                    <span class="round-circle">5</span>
+                                    <p class="mb-0 mt-1 text-gray">Tasks</p>
+                                </div>
+                                <img src="assets/images/arrow-left.svg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="inactive">
+                        <div class="taskItem d-flex pt-3 pb-3 border-bottom align-items-center">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timeLocation">
+                                    <p class="m-0">Manikanta (63)</p>
+                                    <p class="text-gray m-0">+91-2342342798</p>
+                                    <p class="text-gray m-0">RSA, 35 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-row">
+                                <img src="assets/images/chat.svg" alt="">
+                                <div class="text-center">
+                                    <span class="round-circle">5</span>
+                                    <p class="mb-0 mt-1 text-gray">Tasks</p>
+                                </div>
+                                <img src="assets/images/arrow-left.svg" alt="">
+
+                            </div>
+                        </div>
+                        <div class="taskItem d-flex pt-3 pb-3 border-bottom align-items-center">
+                            <div class="iconDiv col-lg-3 text-center">
+                                <img src="assets/images/user.png" class="rounded-circle" alt="">
+                            </div>
+                            <div class="infoDiv col-lg-5 p-0">
+                                <div class="timeLocation">
+                                    <p class="m-0">Manikanta (63)</p>
+                                    <p class="text-gray m-0">+91-2342342798</p>
+                                    <p class="text-gray m-0">RSA, 35 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="statusDiv col-lg-4 p-2 d-flex flex-row">
+                                <img src="assets/images/chat.svg" alt="">
+                                <div class="text-center">
+                                    <span class="round-circle">5</span>
+                                    <p class="mb-0 mt-1 text-gray">Tasks</p>
+                                </div>
+                                <img src="assets/images/arrow-left.svg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailsSlider" id="serviceDetails">
+                    <div class="closeDetailsSlider close" onclick="hideDetailsSlider('serviceDetails')">&times;</div>
+                    <div class="sideBarTabs">
+                        <ul class="nav nav-pills nav-fill">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#mechanicDetails">Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#timeline">Timeline</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="mechanicDetails">
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Name</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>Vishal Das</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Contact</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>+91-9423423423</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pl-4 pr-4 pt-2 pb-2 col-lg-12 border-bottom">
+                                <div class="col-lg-5 p-0">
+                                    <p>Last Location</p>
+                                </div>
+                                <div class="col-lg-7 p-0">
+                                    <p>#123, 123 ,123 , Bangalore, 560012</p>
+                                </div>
+                            </div>
+                            <div class="more-info p-2">
+                                <label for="" class="text-primary float-right">More Info</label>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="timeline">
+                            <div class="card mr-auto mt-3 mb-3 ml-auto" style="max-width: 340px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 align-items-center d-flex justify-content-center">
+                                        <img src="assets/images/user.png" width="50px" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Vishal Das</h6>
+                                            <p class="card-text">4.9 KMs 39 Mins</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="timelineBox">
+                                <ul id="timeline-list">
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-success pt-1 pb-1 pl-2 pr-2">Completed</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-secondary pt-1 pb-1 pl-2 pr-2">Added</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <div class="d-flex align-items-center">
+                                            <label class="title badge-primary pt-1 pb-1 pl-2 pr-2">Started</label>
+                                            <label class="name">by Vishal Das</label>
+                                        </div>
+                                        <small class="info text-gray">Location on Map</small>
+                                        <div class="time">
+                                            <span>31 Mar 2020 <br> 12:00 PM</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
